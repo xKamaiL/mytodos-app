@@ -1,3 +1,102 @@
 module.exports = {
-  extends: 'react-tools'
-}
+  parser: 'babel-eslint',
+  env: {
+    browser: true,
+    es6: true,
+    node: true
+  },
+  extends: ['airbnb'],
+  parserOptions: {
+    ecmaVersion: 7,
+    modules: true,
+    ecmaFeatures: {
+      allowImportExportEverywhere: false,
+      modules: true,
+      jsx: true,
+      forOf: true,
+      blockBindings: true,
+      arrowFunctions: true,
+      classes: true,
+      defaultParams: true,
+      destructuring: true,
+      generators: true,
+      restParams: true,
+      spread: true,
+      superInFunctions: true,
+      templateStrings: true,
+      experimentalObjectRestSpread: true,
+      experimentalDecorators: true
+    },
+    sourceType: 'module'
+  },
+  plugins: ['react', 'jsx-a11y', 'jest'],
+  rules: {
+    'new-cap': 0,
+    'no-tabs': 0,
+    indent: 0,
+    'linebreak-style': 0,
+    'function-paren-newline': 0,
+    'comma-dangle': 1,
+    'import/imports-first': 0,
+    'import/first': 0,
+    'import/newline-after-import': 0,
+    'import/no-dynamic-require': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/no-named-as-default': 0,
+    'import/no-named-as-default-member': 1,
+    'import/no-unresolved': 0,
+    'class-methods-use-this': 0,
+    'import/extensions': [
+      0,
+      'always',
+      {
+        js: 'never',
+        jsx: 'never'
+      }
+    ],
+    'import/prefer-default-export': 0,
+    'react/jsx-uses-react': 1,
+    'react/jsx-uses-vars': 1,
+    'jsx-a11y/aria-props': 2,
+    'jsx-a11y/heading-has-content': 0,
+    'jsx-a11y/href-no-hash': 0,
+    'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/mouse-events-have-key-events': 2,
+    'jsx-a11y/role-has-required-aria-props': 2,
+    'jsx-a11y/role-supports-aria-props': 2,
+    'jsx-a11y/anchor-is-valid': 0,
+    'max-len': 0,
+    'generator-star-spacing': 0,
+    'space-before-function-paren': 0,
+    'newline-per-chained-call': 0,
+    'no-confusing-arrow': 0,
+    'no-console': 0,
+    'react/jsx-no-bind': 0,
+    'react/prefer-stateless-function': 0,
+    'no-use-before-define': 0,
+    'no-underscore-dangle': 0,
+    'no-param-reassign': 0,
+    'object-curly-newline': [
+      'error',
+      {
+        multiline: true,
+        minProperties: 4
+      }
+    ],
+    'prefer-template': 2,
+    'spaced-comment': 1,
+    'react/no-typos': 0,
+    'react/forbid-prop-types': 0,
+    'react/jsx-first-prop-new-line': [2, 'multiline'],
+    'react/jsx-filename-extension': 0,
+    'react/jsx-no-target-blank': 0,
+    'react/require-default-props': 0,
+    'react/require-extension': 0,
+    'react/self-closing-comp': 0,
+    'react/react-in-jsx-scope': 0,
+    'react/display-name': 0,
+    'react/jsx-indent-props': [2, 2],
+    'react/prop-types': 0,
+    camelcase: 0
+  }
+};
